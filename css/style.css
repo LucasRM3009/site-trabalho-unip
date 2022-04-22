@@ -6,6 +6,7 @@ body {
     font-family: Lato;
     font-size: 1em;
 
+    color: #183153;
     background-color: rgb(235, 235, 235);
 }
 
@@ -14,7 +15,7 @@ body {
     top: 0;
     z-index: 2;
 
-    background-color: rgb(238, 238, 238);
+    background-color: rgba(238, 238, 238, 0.767);
     box-shadow: 0px -2px 10px rgb(0 0 0 / 28%);
 }
 
@@ -24,19 +25,12 @@ body {
     justify-content: space-between;
 
     padding: 0.5em 0;
-    /* background-color: aqua; */
-
 }
 
 .container {
     max-width: 90%;
+
     margin: 0 auto;
-
-    /* background-color: aqua; */
-}
-
-.logo {
-    width: 50px;
 }
 
 .cabecalhoPrincipal-nav-ul {
@@ -47,6 +41,8 @@ body {
 .cabecalhoPrincipal-nav-ul-itens {
     position: relative;
     margin-left: 1.5em;
+
+    color: #0b1c33;
     cursor: pointer;
 }
 
@@ -69,6 +65,8 @@ body {
 
     border-radius: 5px;
 
+    cursor: default;
+
     animation: fadeIn 300ms linear;
 }
 
@@ -76,48 +74,238 @@ body {
     display: none;
 }
 
-.nome {
-    color: rgb(238, 238, 238);
-    margin-bottom: 1em;
-    text-align: center;
+.membros:hover .visible {
+    display: block;
 }
 
-.artigo-titulos {
+.nome {
+    text-transform: capitalize;
+    color: rgb(238, 238, 238);
+    text-align: center;
+
+    margin-bottom: 1em;
+}
+
+
+/* SEÇÃO - OBJETIVO DO TRABALHO */
+
+.about-objetivoDoTrabalho {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(184, 184, 184, 0.561);
+}
+
+.about-objetivoDoTrabalho .container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-objetivoDoTrabalho-container {
+    max-width: 70%;
+
+    background-color: rgb(240, 240, 240);
+
+    margin: 50px 0;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 18%);
+}
+
+.about-objetivoDoTrabalho-artigo-titulo {
+    font-size: 2em;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #183153;
+
+    margin: 0.5em 0 1.5em;
+}
+
+.about-objetivoDoTrabalho-artigo p {
+    color: #0b1c33;
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+
+    
+    margin-bottom: 15px;
+}
+
+.div-botaoFechar {
+    margin: 55px 0 50px 10px;
+}
+
+.botaoFechar {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    background-color: rgb(230, 9, 9);
+    box-shadow: 0 5px 0 rgb(144 3 3 / 87%);
+    width: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms background;
+}
+
+.botaoFechar:hover {
+    background-color: rgb(170, 11, 11);
+    box-shadow: 0 5px 0 rgba(82, 1, 1, 0.87);
+}
+
+.botaoFechar:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudoPrincipal .container {
+    max-width: 80%;
+}
+
+.conteudoPrincipal-titulos {
     margin: 3em 0 1.5em;
+
+    color: #051122;
 }
 
 .titulo {
-    font-size: 2.5em;
+    font-size: 2.2em;
+    line-height: 1.2;
     font-weight: 900;
     text-transform: uppercase;
 
     margin-bottom: 0.5em;
 }
 
-.subtitulo {
-    font-size: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-article {
+.conteudoPrincipal-artigo p {
+    font-size: 1.1em;
+    text-align: left;
+    text-indent: 50px;
     line-height: 1.5;
     letter-spacing: 0.2px;
-    text-align: left;
+    color: #0b1c33;
+    
+    margin-bottom: 15px;
 }
 
-.outrosTemas {
-    margin: 2em 0;
+.conteudoPrincipal-artigo p i {
+    font-style: italic;
 }
 
-.tema {
-    max-width: 40%;
+.conteudoPrincipal-artigo-subtitulo {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #183153;
+
+    margin: 1.5em 0 0.5em;
+}
+
+.conteudoPrincipal-artigo h4 {
+    font-size: 1em;
+    font-weight: 800;
+    color: #225aa8;
+
+    margin: 1.5em 0 0.5em;
+}
+
+.conteudoPrincipal-artigo ol {
+    list-style: decimal;
+
+    margin-left: 100px;
+}
+
+.conteudoPrincipal-artigo ol li {
+}
+
+.conteudoPrincipal-artigo ol li p {
+    text-indent: 10px;
+}
+
+.conteudoPrincipal-artigo p > b, .conteudoPrincipal-artigo p i > b {
+    font-weight: 900;
+}
+
+.conteudoPrincipal-subTemas {
+    margin: 2em auto;
+
+    max-width: 70%;
+}
+
+.subtitulo {
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #183153;
+
+    margin: 1.5em 0;
+}
+
+.subTema-divPesquisa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     margin-bottom: 1em;
     padding: 1em;
 
     background-color: rgb(238, 238, 238);
     box-shadow: 0px 1px 5px rgb(0 0 0 / 18%);
+
+    transform: scale(1);
+    transition: 500ms;
+}
+
+.subTema-divPesquisa:hover {
+    transform: scale(1.07);    
+}
+
+.subTema-divPesquisa ul {
+    list-style: circle;
+
+    margin: 0 4em 0 1.5em;
+}
+
+.subTema-titulo {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 2em;
+
+    margin-bottom: 0.8em;
+
+    color: #0b1c33;
+}
+
+.subTema-titulo:last-child {
+    margin-bottom: 0;
+}
+
+.fa-arrow-right {
+    font-size: 1.4em;
+    color: #183153;
+
+    transition: 300ms color;
+}
+
+.fa-arrow-right:hover {
+    color: #1663ce;
+}
+
+.subTema-divPesquisa:hover .fa-arrow-right {
+    animation: 800ms normal infinite moveIn-arrow;
 }
 
 
@@ -129,24 +317,72 @@ article {
     background-color: #1C1C1D;
 }
 
-.logo-unip {
-    display: block;
+.rodapePrincipal-imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    width: 15%;
-
-    margin: 0 auto;
     padding: 30px 20px 4px;
+}
+
+.logo-unip {
+    width: 170px;
+
+    margin-right: 20px;
+}
+
+.logo-tecnologia {
+    display: flex;
+    margin: 0 auto;
 }
 
 .rodapePrincipal p {
     font-size: .8em;
     text-align: center;
+    line-height: 2;
     color: antiquewhite;
     
     padding: 20px;
 }
 
+/* KEYFRAMES */
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes moveIn-section {
+    from {transform: translate(0, -300px)}
+    to {transform: translate(0, 0)}
+}
+
+@keyframes moveOut-section {
+    from {transform: translate(0, 0)}
+    to {transform: translate(0, -300px)}
+}
+
+@keyframes moveIn-arrow {
+    0% {transform: translate(0, 0)}
+    50% {transform: translate(-20px, 0)}
+    100% {transform: translate(0, 0)}
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .about-objetivoDoTrabalho-container {max-width: 80%;}
+    .about-objetivoDoTrabalho-artigo-titulo {
+        font-size: 1.6em;
+
+        margin: 0.5em 0 1em;
+    }
+    .about-objetivoDoTrabalho-artigo p {text-indent: 20px;}
+    .conteudoPrincipal-subTemas {max-width: 100%;}
 }
