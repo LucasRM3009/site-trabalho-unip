@@ -103,22 +103,23 @@ body {
     width: 100vw;
     height: 100vh;
 
-    background-color: rgba(184, 184, 184, 0.561);
+    background-color: rgb(174, 180, 197);
 }
 
 .about-objetivoDoTrabalho .container {
     position: relative;
+    top: 70px;
     z-index: 2;
-
+    
     display: flex;
     justify-content: center;
+
+    max-width: 75%;
+
+    padding-bottom: 25px;
 }
 
 .about-objetivoDoTrabalho-container {
-    position: fixed;
-    top: 70px;
-    max-width: 70%;
-
     background-color: rgb(240, 240, 240);
 
     padding: 25px;
@@ -135,7 +136,7 @@ body {
     text-transform: uppercase;
     color: #183153;
 
-    margin: 0.5em 0 1.5em;
+    margin: 0.5em 0 1em;
 }
 
 .about-objetivoDoTrabalho-artigo p {
@@ -145,18 +146,22 @@ body {
     line-height: 1.5;
     letter-spacing: 0.2px;
     
-    margin-bottom: 15px;
+    margin-bottom: 1em;
+}
+
+.about-objetivoDoTrabalho-artigo p:last-child {
+    margin-bottom: 0;
 }
 
 .div-botaoFechar {
     margin: 0 auto;
-    position: fixed;
-    top: 25px;
+    position: absolute;
+    top: -50px;
 
     display: flex;
     justify-content: end;
 
-    width: 68%;
+    width: 96%;
 }
 
 .botaoFechar {
@@ -400,13 +405,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .cabecalhoPrincipal .container {justify-content: center;}
-    .logo {margin-bottom: 1.2em;}
+    .logo {margin-bottom: 1.2em; margin-right: 0;}
     .cabecalhoPrincipal-nav-ul {justify-content: space-around;}
     .cabecalhoPrincipal-nav-ul-itens {margin: 0; padding: 10px;}
-    .about-objetivoDoTrabalho-container {max-width: 80%;}
+    .about-objetivoDoTrabalho .container {max-width: 80%;}
     .about-objetivoDoTrabalho-artigo-titulo {font-size: 1.6em; margin: 0.5em 0 1em;}
     .about-objetivoDoTrabalho-artigo p {text-indent: 20px;}
-    .div-botaoFechar {width: 78%;}
+    .div-botaoFechar {width: 96%;}
     .titulo {font-size: 1.6em;}
     .conteudoPrincipal-artigo-subtitulo {font-size: 1.1em; line-height: 1.2;}
     .subtitulo {font-size: 1.5em;}
