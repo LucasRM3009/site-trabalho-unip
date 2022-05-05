@@ -1,3 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root {
+    /* LIGHT THEME */
+    --bgDefaultLight: #f0f0f0;
+    --bgCabecalhoPrincipalLight: #eeeeeec4;
+    --bgCabecalhoPrincipal-BoxShadowLight: rgb(0 0 0 / 28%);
+    --bgMembrosLight: #111111f6;
+    --bgConteudoPrincipalSubTemasLinkPesquisaLight: #eeeeee;
+    --bgConteudoPrincipalSubTemasLinkPesquisaBoxShadowLight: rgb(0 0 0 / 18%);
+    --bgRodapePrincipalLight: #1C1C1D;
+    --bgSectionDescricaoDoTrabalhoContainerLight: #f0f0f0;
+    --bgSectionDescricaoDoTrabalhoContainerBoxShadowLight: rgb(0 0 0 / 18%);
+    --colorPadraoDark: #183153;
+    --colorItensmenu_ArtigoParagrafosLight: #0b1b32;
+    --colorConteudoPrincipalArtigoTituloLight: #051223;
+    --colorMembrosLight: #eeeeee;
+    --colorConteudoPrincipalArtigoSubtitulo_SubtituloLight: #183153;
+    --colorconteudoPrincipalArtigoH4Light: #225aa8;
+    --colorRodapePrincipalParagrafoLight: #faebd7;
+    
+    /* DARK THEME */
+    --bgDefaultDark: #0a0a0a;
+    --bgCabecalhoPrincipalDark: #111111c4;
+    --bgCabecalhoPrincipal-BoxShadowDark: rgb(255 255 255 / 30%);
+    --bgMembrosDark: #e0e0e0;
+    --bgConteudoPrincipalSubTemasLinkPesquisaDark: #111111;
+    --bgConteudoPrincipalSubTemasLinkPesquisaBoxShadowDark: rgb(255 255 255 / 27%);
+    --bgRodapePrincipalDark: #cecece;
+    --bgSectionDescricaoDoTrabalhoContainerDark: #111111e7;
+    --bgSectionDescricaoDoTrabalhoContainerBoxShadowDark: rgb(255 255 255 / 27%);
+    --colorPadraoDark: #f0f0f0;
+    --colorItensmenu_ArtigoParagrafosDark: #f1f1f1;
+    --colorConteudoPrincipalArtigoTituloDark: #187cff;
+    --colorMembrosDark: #111111f6;
+    --colorConteudoPrincipalArtigoSubtitulo_SubtituloDark: #044caa;
+    --colorconteudoPrincipalArtigoH4Dark: #063577;
+    --colorRodapePrincipalParagrafoDark: rgb(22, 22, 22);    
+}
+
+.light-theme {
+    --bg: var(--bgDefaultLight);
+    --bgCabecalhoPrincipal: var(--bgCabecalhoPrincipalLight);
+    --bgCabecalhoPrincipal-BoxShadow: var(--bgCabecalhoPrincipal-BoxShadowLight);
+    --bgMembros: var(--bgMembrosLight);
+    --bgConteudoPrincipalSubTemasLinkPesquisa: var(--bgConteudoPrincipalSubTemasLinkPesquisaLight);
+    --bgConteudoPrincipalSubTemasLinkPesquisaBoxShadow: var(--bgConteudoPrincipalSubTemasLinkPesquisaBoxShadowLight);
+    --bgRodapePrincipal: var(--bgRodapePrincipalLight);
+    --bgSectionDescricaoDoTrabalhoContainer: var(--bgSectionDescricaoDoTrabalhoContainerLight);
+    --bgSectionDescricaoDoTrabalhoContainerBoxShadow: var(--bgSectionDescricaoDoTrabalhoContainerBoxShadowLight);
+    
+    --colorPadrao: var(--colorAzulEscuro21);    
+    --colorItensmenu_ArtigoParagrafos: var(--colorItensmenu_ArtigoParagrafosLight);
+    --colorConteudoPrincipalArtigoTitulo: var(--colorConteudoPrincipalArtigoTituloLight);
+    --colorMembros: var(--colorMembrosLight);
+    --colorConteudoPrincipalArtigoSubtitulo_Subtitulo: var(--colorConteudoPrincipalArtigoSubtitulo_SubtituloLight);
+    --colorconteudoPrincipalArtigoH4: var(--colorconteudoPrincipalArtigoH4Light);
+    --colorRodapePrincipalParagrafo: var(--colorRodapePrincipalParagrafoLight);
+}
+
+.dark-theme {
+    --bg: var(--bgDefaultDark);
+    --bgCabecalhoPrincipal: var(--bgCabecalhoPrincipalDark);
+    --bgCabecalhoPrincipal-BoxShadow: var(--bgCabecalhoPrincipal-BoxShadowDark);
+    --bgMembros: var(--bgMembrosDark);
+    --bgConteudoPrincipalSubTemasLinkPesquisa: var(--bgConteudoPrincipalSubTemasLinkPesquisaDark);
+    --bgConteudoPrincipalSubTemasLinkPesquisaBoxShadow: var(--bgConteudoPrincipalSubTemasLinkPesquisaBoxShadowDark);
+    --bgRodapePrincipal: var(--bgRodapePrincipalDark);
+    --bgSectionDescricaoDoTrabalhoContainer: var(--bgSectionDescricaoDoTrabalhoContainerDark);
+    --bgSectionDescricaoDoTrabalhoContainerBoxShadow: var(--bgSectionDescricaoDoTrabalhoContainerBoxShadowDark);
+    
+    --colorPadrao: var(--colorPadraoDark);
+    --colorItensmenu_ArtigoParagrafos: var(--colorItensmenu_ArtigoParagrafosDark);
+    --colorConteudoPrincipalArtigoTitulo: var(--colorConteudoPrincipalArtigoTituloDark);
+    --colorMembros: var(--colorMembrosDark);
+    --colorConteudoPrincipalArtigoSubtitulo_Subtitulo: var(--colorConteudoPrincipalArtigoSubtitulo_SubtituloDark);
+    --colorconteudoPrincipalArtigoH4: var(--colorconteudoPrincipalArtigoH4Dark);
+    --colorRodapePrincipalParagrafo: var(--colorRodapePrincipalParagrafoDark);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,8 +86,8 @@ body {
     font-family: Lato;
     font-size: 1em;
 
-    color: #183153;
-    background-color: rgb(235, 235, 235);
+    color: var(--colorPadrao);
+    background-color: var(--bg);
 }
 
 .cabecalhoPrincipal {
@@ -15,8 +95,8 @@ body {
     top: 0;
     z-index: 2;
 
-    background-color: rgba(238, 238, 238, 0.767);
-    box-shadow: 0px -2px 10px rgb(0 0 0 / 28%);
+    background-color: var(--bgCabecalhoPrincipal);
+    box-shadow: 0px -2px 10px var(--bgCabecalhoPrincipal-BoxShadow);
 }
 
 .cabecalhoPrincipal .container {
@@ -34,7 +114,7 @@ body {
     margin: 0 auto;
 }
 
-.logo {
+.cabecalhoPrincipal-logo {
     margin-right: 20px;
 }
 
@@ -48,8 +128,13 @@ body {
     position: relative;
     margin-left: 1.5em;
 
-    color: #0b1c33;
+    text-transform: capitalize;
+
     cursor: pointer;
+}
+
+.cabecalhoPrincipal-nav-ul-itens, .cabecalhoPrincipal-nav-ul-itens a {
+    color: var(--colorItensmenu_ArtigoParagrafos);
 }
 
 .cabecalhoPrincipal-nav-ul-itens:hover, 
@@ -67,7 +152,7 @@ body {
     padding: 1em 1em 0;
     margin: 8px -10px 0 0;
 
-    background-color: rgba(17, 17, 17, 0.965);
+    background-color: var(--bgMembros);
 
     border-radius: 5px;
 
@@ -76,24 +161,16 @@ body {
     animation: fadeIn 300ms linear;
 }
 
-.visible {
-    display: none;
-}
-
-.membros:hover .visible {
-    display: block;
-}
-
 .nome {
     text-transform: capitalize;
-    color: rgb(238, 238, 238);
+    color: var(--colorMembros);
     text-align: center;
 
     margin-bottom: 1em;
 }
 
 
-/* SEÇÃO - OBJETIVO DO TRABALHO */
+/* SEÇÃO - OBJETIVO & DISSERTAÇÃO DO TRABALHO */
 
 .planoDeFundo {
     position: fixed;
@@ -103,10 +180,10 @@ body {
     width: 100vw;
     height: 100vh;
 
-    background-color: rgb(174, 180, 197);
+    background: linear-gradient(-45deg, rgb(41, 48, 66) 0%, rgb(113, 123, 148) 25%, rgb(151, 160, 185) 50%, rgb(65, 74, 102) 100%);
 }
 
-.about-objetivoDoTrabalho .container {
+.section-descricaoDoTrabalho .container {
     position: relative;
     top: 70px;
     z-index: 2;
@@ -114,33 +191,37 @@ body {
     display: flex;
     justify-content: center;
 
-    max-width: 75%;
+    max-width: 85%;
 
-    padding-bottom: 25px;
+    padding: 0 1.5em 1.5em;
 }
 
-.about-objetivoDoTrabalho-container {
-    background-color: rgb(240, 240, 240);
+.visible{
+    display: none;
+}
 
-    padding: 25px;
+.section-descricaoDoTrabalho-container {
+    background-color: var(--bgSectionDescricaoDoTrabalhoContainer);
+
+    padding: 1.5em;
 
     border-radius: 15px;
 
-    box-shadow: 0px 1px 5px rgb(0 0 0 / 18%);
+    box-shadow: 0 1px 10px var(--bgSectionDescricaoDoTrabalhoContainerBoxShadow);
 }
 
-.about-objetivoDoTrabalho-artigo-titulo {
+.section-descricaoDoTrabalho-artigo-titulo {
     font-size: 2em;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    color: #183153;
+    color: var(--colorConteudoPrincipalArtigoTitulo);
 
     margin: 0.5em 0 1em;
 }
 
-.about-objetivoDoTrabalho-artigo p {
-    color: #0b1c33;
+.section-descricaoDoTrabalho-artigo p {
+    color: var(--colorItensmenu_ArtigoParagrafos);
     text-align: justify;
     text-indent: 50px;
     line-height: 1.5;
@@ -149,11 +230,11 @@ body {
     margin-bottom: 1em;
 }
 
-.about-objetivoDoTrabalho-artigo p:last-child {
+.section-descricaoDoTrabalho-artigo p:last-child {
     margin-bottom: 0;
 }
 
-.div-botaoFechar {
+.section-descricaoDoTrabalho-divBotaoFechar {
     margin: 0 auto;
     position: absolute;
     top: -50px;
@@ -161,7 +242,7 @@ body {
     display: flex;
     justify-content: end;
 
-    width: 96%;
+    width: 88%;
 }
 
 .botaoFechar {
@@ -197,45 +278,25 @@ body {
 /* CONTEÚDO PRINCIPAL */
 
 .conteudoPrincipal .container {
-    max-width: 80%;
+    max-width: 90%;
 }
 
-.conteudoPrincipal-titulos {
-    margin: 3em 0 1.5em;
-
-    color: #051122;
-}
-
-.titulo {
+.conteudoPrincipal-artigo-titulo {
     font-size: 2.5em;
     word-break: break-word;
     line-height: 1.2;
     font-weight: 900;
     text-transform: uppercase;
-
-    margin-bottom: 0.5em;
-}
-
-.conteudoPrincipal-artigo p {
-    font-size: 1.1em;
-    text-align: left;
-    text-indent: 50px;
-    line-height: 1.5;
-    letter-spacing: 0.2px;
-    color: #0b1c33;
+    color: var(--colorConteudoPrincipalArtigoTitulo);
     
-    margin-bottom: 15px;
-}
-
-.conteudoPrincipal-artigo p i {
-    font-style: italic;
+    margin: 1.5em 0 0.5em;
 }
 
 .conteudoPrincipal-artigo-subtitulo {
     font-size: 1.5em;
     font-weight: 800;
     text-transform: uppercase;
-    color: #183153;
+    color: var(--colorConteudoPrincipalArtigoSubtitulo_Subtitulo);
 
     margin: 1.5em 0 0.5em;
 }
@@ -243,9 +304,28 @@ body {
 .conteudoPrincipal-artigo h4 {
     font-size: 1em;
     font-weight: 800;
-    color: #225aa8;
+    color: var(--colorconteudoPrincipalArtigoH4);
 
     margin: 1.5em 0 0.5em;
+}
+
+.conteudoPrincipal-artigo-paragrafo {
+    font-size: 1.1em;
+    text-align: left;
+    text-indent: 50px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    color: var(--colorItensmenu_ArtigoParagrafos);
+    
+    margin-bottom: 1em;
+}
+
+.conteudoPrincipal-artigo-paragrafo > b, .conteudoPrincipal-artigo-paragrafo i > b {
+    font-weight: 900;
+}
+
+.conteudoPrincipal-artigo-paragrafo i {
+    font-style: italic;
 }
 
 .conteudoPrincipal-artigo ol {
@@ -254,21 +334,12 @@ body {
     margin-left: 100px;
 }
 
-.conteudoPrincipal-artigo ol li {
-}
-
 .conteudoPrincipal-artigo ol li p {
     text-indent: 10px;
 }
 
-.conteudoPrincipal-artigo p > b, .conteudoPrincipal-artigo p i > b {
-    font-weight: 900;
-}
-
 .conteudoPrincipal-subTemas {
     margin: 2em auto;
-
-    max-width: 70%;
 }
 
 .subtitulo {
@@ -276,47 +347,63 @@ body {
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    color: #183153;
+    color: var(--colorConteudoPrincipalArtigoSubtitulo_Subtitulo);
 
     margin: 1.5em 0;
 }
 
-.subTema-divPesquisa {
+.conteudoPrincipal-subTemas-linkPesquisa {
+    display: flex;
+    
+    max-width: 80%;
+    
+    margin: 0 auto 1em;
+    padding: 1em;
+
+    background-color: var(--bgConteudoPrincipalSubTemasLinkPesquisa);
+    box-shadow: 0 1px 5px var(--bgConteudoPrincipalSubTemasLinkPesquisaBoxShadow);
+
+    transition: 500ms;
+}
+
+.conteudoPrincipal-subTemas-linkPesquisa:hover {
+    transform: scale(1.07);    
+}
+
+.conteudoPrincipal-subTemas-linkPesquisa-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 1em;
-    padding: 1em;
-
-    background-color: rgb(238, 238, 238);
-    box-shadow: 0px 1px 5px rgb(0 0 0 / 18%);
-
-    transform: scale(1);
-    transition: 500ms;
+    width: 100%;
 }
 
-.subTema-divPesquisa:hover {
-    transform: scale(1.07);    
+.conteudoPrincipal-subTemas-linkPesquisa-div h3 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #1663ce;
+
+    margin: 0.5em 0 1em 1em;
 }
 
-.subTema-divPesquisa ul {
+.conteudoPrincipal-subTemas-linkPesquisa-div ul {
     list-style: circle;
 
     margin: 0 4em 0 1.5em;
 }
 
-.subTema-titulo {
+.conteudoPrincipal-subTemas-linkPesquisa-div-titulo {
     font-size: 1em;
     font-weight: 600;
     line-height: 2em;
 
     margin-bottom: 0.8em;
 
-    color: #0b1c33;
+    color: var(--colorItensmenu_ArtigoParagrafos);
 }
 
-.subTema-titulo:last-child {
+.conteudoPrincipal-subTemas-linkPesquisa-div-titulo:last-child {
     margin-bottom: 0;
 }
 
@@ -331,7 +418,7 @@ body {
     color: #1663ce;
 }
 
-.subTema-divPesquisa:hover .fa-arrow-right {
+.conteudoPrincipal-subTemas-linkPesquisa-div:hover .fa-arrow-right {
     animation: 800ms normal infinite moveIn-arrow;
 }
 
@@ -341,7 +428,7 @@ body {
 .rodapePrincipal {
     max-width: 100%;
 
-    background-color: #1C1C1D;
+    background-color: var(--bgRodapePrincipal);
 }
 
 .rodapePrincipal-imagens {
@@ -354,12 +441,12 @@ body {
 }
 
 .logo-unip {
-    max-width: 170px;
+    width: 170px;
 
-    margin-right: 20px;
+    margin-right: 3em;
 }
 
-.logo-tecnologia {
+.logo-inclusãoDigital {
     margin: 0 auto;
 }
 
@@ -367,7 +454,7 @@ body {
     font-size: .8em;
     text-align: center;
     line-height: 2;
-    color: antiquewhite;
+    color: var(--colorRodapePrincipalParagrafo);
     
     padding: 20px;
 }
@@ -385,13 +472,13 @@ body {
 }
 
 @keyframes moveIn-section {
-    from {transform: translate(0, -300px)}
+    from {transform: translate(0, -40%)}
     to {transform: translate(0, 0)}
 }
 
 @keyframes moveOut-section {
     from {transform: translate(0, 0)}
-    to {transform: translate(0, -300px)}
+    to {transform: translate(0, -100%)}
 }
 
 @keyframes moveIn-arrow {
@@ -403,22 +490,38 @@ body {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 390px) {
+    .rodapePrincipal-imagens {flex-direction: column;}
+    .logo-unip {margin: 0 0 1.8em;}
+}
+
+
 @media screen and (max-width: 768px) {
-    .cabecalhoPrincipal .container {justify-content: center;}
-    .logo {margin-bottom: 1.2em; margin-right: 0;}
+    .cabecalhoPrincipal .container {justify-content: center; flex-direction: column;}
+    .cabecalhoPrincipal-logo {margin-bottom: 1.2em; margin-right: 0;}
     .cabecalhoPrincipal-nav-ul {justify-content: space-around;}
     .cabecalhoPrincipal-nav-ul-itens {margin: 0; padding: 10px;}
-    .about-objetivoDoTrabalho .container {max-width: 80%;}
-    .about-objetivoDoTrabalho-artigo-titulo {font-size: 1.6em; margin: 0.5em 0 1em;}
-    .about-objetivoDoTrabalho-artigo p {text-indent: 20px;}
-    .div-botaoFechar {width: 96%;}
-    .titulo {font-size: 1.6em;}
+    .cabecalhoPrincipal-nav-ul-itens:hover .membros {left: 0; right: 0; margin: 8px auto 0; position: fixed;}
+    .section-descricaoDoTrabalho .container {max-width: 90%; padding: 0 0 1.5em;}
+    .section-descricaoDoTrabalho-artigo-titulo {font-size: 1.6em; margin: 0.5em 0 1em;}
+    .section-descricaoDoTrabalho-artigo p {text-indent: 20px;}
+    .section-descricaoDoTrabalho-divBotaoFechar {width: 93%;}
+    .conteudoPrincipal-artigo-titulo {font-size: 1.6em;}
     .conteudoPrincipal-artigo-subtitulo {font-size: 1.1em; line-height: 1.2;}
     .subtitulo {font-size: 1.5em;}
-    .conteudoPrincipal-artigo p {text-indent: 20px; text-align: justify;}
+    .conteudoPrincipal-artigo-paragrafo {text-indent: 20px; text-align: justify;}
     .conteudoPrincipal-subTemas {max-width: 100%;}
-    .subTema-divPesquisa {position: relative;}
-    .subTema-divPesquisa ul {margin: 0 0 2.5em 1.5em;}
-    .fa-arrow-right {font-size: 1.6em; position: absolute; bottom: 0.8em; right: 1em;}
-    .logo-unip {margin: 0 0 1em 0;}
+    .conteudoPrincipal-subTemas-linkPesquisa {max-width: 100%;}
+    .conteudoPrincipal-subTemas-linkPesquisa-div {position: relative; display: block;}
+    .conteudoPrincipal-subTemas-linkPesquisa-div h3 {text-align: center; margin-left: 0;}
+    .conteudoPrincipal-subTemas-linkPesquisa-div ul {margin: 0 0 3.5em 1.5em;}
+    .fa-arrow-right {font-size: 1.6em; position: absolute; bottom: 0.5em; right: 0.5em;}
+    .logo-unip {width: 125px;}
+    .logo-inclusãoDigital {width: 64px;}
+}
+
+@media screen and (min-width: 1045px) {
+    .conteudoPrincipal .container {max-width: 1700px; padding: 0 100px;}
+    .section-descricaoDoTrabalho .container {max-width: 1200px;}
+    .section-descricaoDoTrabalho-divBotaoFechar {width: 90%;}
 }
