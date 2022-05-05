@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700;800;900&display=swap');
 
 :root {
     /* LIGHT THEME */
@@ -11,7 +11,7 @@
     --bgRodapePrincipalLight: #1C1C1D;
     --bgSectionDescricaoDoTrabalhoContainerLight: #f0f0f0;
     --bgSectionDescricaoDoTrabalhoContainerBoxShadowLight: rgb(0 0 0 / 18%);
-    --colorPadraoDark: #183153;
+    --colorPadraoLight: #183153;
     --colorItensmenu_ArtigoParagrafosLight: #0b1b32;
     --colorConteudoPrincipalArtigoTituloLight: #051223;
     --colorMembrosLight: #eeeeee;
@@ -49,7 +49,7 @@
     --bgSectionDescricaoDoTrabalhoContainer: var(--bgSectionDescricaoDoTrabalhoContainerLight);
     --bgSectionDescricaoDoTrabalhoContainerBoxShadow: var(--bgSectionDescricaoDoTrabalhoContainerBoxShadowLight);
     
-    --colorPadrao: var(--colorAzulEscuro21);    
+    --colorPadrao: var(--colorPadraoLight);    
     --colorItensmenu_ArtigoParagrafos: var(--colorItensmenu_ArtigoParagrafosLight);
     --colorConteudoPrincipalArtigoTitulo: var(--colorConteudoPrincipalArtigoTituloLight);
     --colorMembros: var(--colorMembrosLight);
@@ -215,7 +215,7 @@ body {
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    color: var(--colorConteudoPrincipalArtigoTitulo);
+    color: var(--colorConteudoPrincipalArtigoSubtitulo_Subtitulo);
 
     margin: 0.5em 0 1em;
 }
@@ -344,7 +344,7 @@ body {
 
 .subtitulo {
     font-size: 2.2em;
-    font-weight: 900;
+    font-weight: 800;
     text-align: center;
     text-transform: uppercase;
     color: var(--colorConteudoPrincipalArtigoSubtitulo_Subtitulo);
