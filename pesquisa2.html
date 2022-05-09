@@ -13,15 +13,19 @@
 <body>
     <!-- CABEÇALHO -->
     <header class="cabecalhoPrincipal">
-        <div class="container">
+        <div class="container">            
             <img src="img/inclusao-digital.png" alt="inclusão-digital" class="cabecalhoPrincipal-logo">
-            <nav>
-                <ul class="cabecalhoPrincipal-nav-ul">
-                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="index.html">Home</a></li>
-                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#" id="linkObjetivo">Objective</a></li>
-                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#pesquisas">Researches</a></li>
-                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#" id="linkDissertacao">Dissertation</a></li>
-                    <li class="cabecalhoPrincipal-nav-ul-itens">Members
+            
+            <nav class="cabecalhoPrincipal-nav">
+                <button id="mobile-menu" aria-haspopup="true" aria-controls="cabecalhoPrincipal-nav-ul" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="cabecalhoPrincipal-nav-ul" role="menu">
+                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="index.html">Inicio</a></li>
+                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#" id="linkObjetivo">Objetivo</a></li>
+                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#pesquisas" id="pesquisa">Pesquisas</a></li>
+                    <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#" id="linkDissertacao">Dissertação</a></li>
+                    <li class="cabecalhoPrincipal-nav-ul-itens">Membros
                         <div class="membros visible">
                             <p class="nome">Lucas Rodrigues Marcondes</p>
                             <p class="nome">Maurício Barbosa</p>
@@ -44,10 +48,10 @@
 
         <div class="container">
             <div class="section-descricaoDoTrabalho-divBotaoFechar">
-                <button class="botaoFechar" id="botaoFechar"><i class="fa-solid fa-xmark"></i></button>
+                <button class="botaoFechar" id="botaoFechar" aria-haspopup="true" aria-controls="section-descricaoDoTrabalho-container"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
-            <div class="section-descricaoDoTrabalho-container" id="animationMove">
+            <div class="section-descricaoDoTrabalho-container" id="animationMove" role="SectionObjetivo">
                 <article class="section-descricaoDoTrabalho-artigo">
                     <h1 class="section-descricaoDoTrabalho-artigo-titulo">Objetivo do Trabalho</h1>
                     
@@ -61,17 +65,17 @@
             </div>
         </div>
     </section>
-    
+
     <!-- SECTION DISSERTAÇÃO DO TRABALHO -->
     <section class="section-descricaoDoTrabalho visible">
         <div class="planoDeFundo"></div>
 
         <div class="container">
             <div class="section-descricaoDoTrabalho-divBotaoFechar">
-                <button class="botaoFechar" id="botaoFechar"><i class="fa-solid fa-xmark"></i></button>
+                <button class="botaoFechar" id="botaoFechar" aria-haspopup="true" aria-controls="section-descricaoDoTrabalho-container" aria-expanded="false"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
-            <div class="section-descricaoDoTrabalho-container" id="animationMove">
+            <div class="section-descricaoDoTrabalho-container" id="animationMove" role="SectionDissetacao">
                 <article class="section-descricaoDoTrabalho-artigo">
                     <h1 class="section-descricaoDoTrabalho-artigo-titulo">Dissertação</h1>
                     

@@ -11,6 +11,7 @@
     --bgRodapePrincipalLight: #1C1C1D;
     --bgSectionDescricaoDoTrabalhoContainerLight: #f0f0f0;
     --bgSectionDescricaoDoTrabalhoContainerBoxShadowLight: rgb(0 0 0 / 18%);
+    --bgCabecalhoPrincipalNavUlItensLight: rgba(0, 0, 0, .10);
     --colorPadraoLight: #183153;
     --colorItensmenu_ArtigoParagrafosLight: #0b1b32;
     --colorConteudoPrincipalArtigoTituloLight: #051223;
@@ -18,6 +19,7 @@
     --colorConteudoPrincipalArtigoSubtitulo_SubtituloLight: #183153;
     --colorconteudoPrincipalArtigoH4Light: #225aa8;
     --colorRodapePrincipalParagrafoLight: #faebd7;
+    --colorArrowLight: #183153;
     
     /* DARK THEME */
     --bgDefaultDark: #0a0a0a;
@@ -29,17 +31,19 @@
     --bgRodapePrincipalDark: #cecece;
     --bgSectionDescricaoDoTrabalhoContainerDark: #111111e7;
     --bgSectionDescricaoDoTrabalhoContainerBoxShadowDark: rgb(255 255 255 / 27%);
+    --bgCabecalhoPrincipalNavUlItensDark: rgba(255, 255, 255, .15);
     --colorPadraoDark: #f0f0f0;
     --colorItensmenu_ArtigoParagrafosDark: #f1f1f1;
     --colorConteudoPrincipalArtigoTituloDark: #187cff;
     --colorMembrosDark: #111111f6;
     --colorConteudoPrincipalArtigoSubtitulo_SubtituloDark: #044caa;
     --colorconteudoPrincipalArtigoH4Dark: #063577;
-    --colorRodapePrincipalParagrafoDark: rgb(22, 22, 22);    
+    --colorRodapePrincipalParagrafoDark: rgb(22, 22, 22);  
+    --colorArrowDark: rgb(175, 16, 95);   
 }
 
 .light-theme {
-    --bg: var(--bgDefaultLight);
+    --bgDefault: var(--bgDefaultLight);
     --bgCabecalhoPrincipal: var(--bgCabecalhoPrincipalLight);
     --bgCabecalhoPrincipal-BoxShadow: var(--bgCabecalhoPrincipal-BoxShadowLight);
     --bgMembros: var(--bgMembrosLight);
@@ -48,6 +52,7 @@
     --bgRodapePrincipal: var(--bgRodapePrincipalLight);
     --bgSectionDescricaoDoTrabalhoContainer: var(--bgSectionDescricaoDoTrabalhoContainerLight);
     --bgSectionDescricaoDoTrabalhoContainerBoxShadow: var(--bgSectionDescricaoDoTrabalhoContainerBoxShadowLight);
+    --bgCabecalhoPrincipalNavUlItens: var(--bgCabecalhoPrincipalNavUlItensLight);
     
     --colorPadrao: var(--colorPadraoLight);    
     --colorItensmenu_ArtigoParagrafos: var(--colorItensmenu_ArtigoParagrafosLight);
@@ -56,10 +61,11 @@
     --colorConteudoPrincipalArtigoSubtitulo_Subtitulo: var(--colorConteudoPrincipalArtigoSubtitulo_SubtituloLight);
     --colorconteudoPrincipalArtigoH4: var(--colorconteudoPrincipalArtigoH4Light);
     --colorRodapePrincipalParagrafo: var(--colorRodapePrincipalParagrafoLight);
+    --colorArrow: var(--colorArrowLight);
 }
 
 .dark-theme {
-    --bg: var(--bgDefaultDark);
+    --bgDefault: var(--bgDefaultDark);
     --bgCabecalhoPrincipal: var(--bgCabecalhoPrincipalDark);
     --bgCabecalhoPrincipal-BoxShadow: var(--bgCabecalhoPrincipal-BoxShadowDark);
     --bgMembros: var(--bgMembrosDark);
@@ -68,6 +74,7 @@
     --bgRodapePrincipal: var(--bgRodapePrincipalDark);
     --bgSectionDescricaoDoTrabalhoContainer: var(--bgSectionDescricaoDoTrabalhoContainerDark);
     --bgSectionDescricaoDoTrabalhoContainerBoxShadow: var(--bgSectionDescricaoDoTrabalhoContainerBoxShadowDark);
+    --bgCabecalhoPrincipalNavUlItens: var(--bgCabecalhoPrincipalNavUlItensDark);
     
     --colorPadrao: var(--colorPadraoDark);
     --colorItensmenu_ArtigoParagrafos: var(--colorItensmenu_ArtigoParagrafosDark);
@@ -76,6 +83,7 @@
     --colorConteudoPrincipalArtigoSubtitulo_Subtitulo: var(--colorConteudoPrincipalArtigoSubtitulo_SubtituloDark);
     --colorconteudoPrincipalArtigoH4: var(--colorconteudoPrincipalArtigoH4Dark);
     --colorRodapePrincipalParagrafo: var(--colorRodapePrincipalParagrafoDark);
+    --colorArrow: var(--colorArrowDark);
 }
 
 * {
@@ -87,7 +95,7 @@ body {
     font-size: 1em;
 
     color: var(--colorPadrao);
-    background-color: var(--bg);
+    background-color: var(--bgDefault);
 }
 
 .cabecalhoPrincipal {
@@ -112,6 +120,10 @@ body {
     max-width: 90%;
 
     margin: 0 auto;
+}
+
+#mobile-menu{
+    display: none;
 }
 
 .cabecalhoPrincipal-logo {
@@ -147,7 +159,7 @@ body {
     position: absolute;
     right: 0;
 
-    width: 270px;
+    max-width: 270px;
 
     padding: 1em 1em 0;
     margin: 8px -10px 0 0;
@@ -162,9 +174,9 @@ body {
 }
 
 .nome {
+    text-align: center;
     text-transform: capitalize;
     color: var(--colorMembros);
-    text-align: center;
 
     margin-bottom: 1em;
 }
@@ -409,7 +421,7 @@ body {
 
 .fa-arrow-right {
     font-size: 1.4em;
-    color: #183153;
+    color: var(--colorArrow);
 
     transition: 300ms color;
 }
@@ -491,24 +503,19 @@ body {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 390px) {
+    .cabecalhoPrincipal-nav-ul-itens:hover .membros {max-width: 80%;}
     .rodapePrincipal-imagens {flex-direction: column;}
     .logo-unip {margin: 0 0 1.8em;}
 }
 
-
 @media screen and (max-width: 768px) {
-    .cabecalhoPrincipal .container {justify-content: center; flex-direction: column;}
-    .cabecalhoPrincipal-logo {margin-bottom: 1.2em; margin-right: 0;}
-    .cabecalhoPrincipal-nav-ul {justify-content: space-around;}
-    .cabecalhoPrincipal-nav-ul-itens {margin: 0; padding: 10px;}
-    .cabecalhoPrincipal-nav-ul-itens:hover .membros {left: 0; right: 0; margin: 8px auto 0; position: fixed;}
     .section-descricaoDoTrabalho .container {max-width: 90%; padding: 0 0 1.5em;}
     .section-descricaoDoTrabalho-artigo-titulo {font-size: 1.6em; margin: 0.5em 0 1em;}
     .section-descricaoDoTrabalho-artigo p {text-indent: 20px;}
     .section-descricaoDoTrabalho-divBotaoFechar {width: 93%;}
     .conteudoPrincipal-artigo-titulo {font-size: 1.6em;}
     .conteudoPrincipal-artigo-subtitulo {font-size: 1.1em; line-height: 1.2;}
-    .subtitulo {font-size: 1.5em;}
+    .subtitulo {font-size: 1.8em;}
     .conteudoPrincipal-artigo-paragrafo {text-indent: 20px; text-align: justify;}
     .conteudoPrincipal-subTemas {max-width: 100%;}
     .conteudoPrincipal-subTemas-linkPesquisa {max-width: 100%;}
@@ -518,6 +525,17 @@ body {
     .fa-arrow-right {font-size: 1.6em; position: absolute; bottom: 0.5em; right: 0.5em;}
     .logo-unip {width: 125px;}
     .logo-inclusãoDigital {width: 64px;}
+}
+
+@media screen and (max-width: 999px) {
+    .cabecalhoPrincipal-nav-ul-itens:hover .membros {position: fixed; left: 0; right: 0; bottom: 175px; margin: 0 auto;}
+    .cabecalhoPrincipal-bg {background-color: var(--bgDefault)}
+    #mobile-menu {display: block; font-size: 1.8em; padding: 3px 7px; color: var(--colorItensmenu_ArtigoParagrafos); background: none; border: none;cursor: pointer;}
+    .cabecalhoPrincipal-nav-ul {display: block; visibility: hidden; position: absolute; top: 90px; right: 0; width: 100%; height: 0;background-color: var(--bgDefault); overflow-y: hidden; z-index: 1000; transition: .6s all;}    
+    .cabecalhoPrincipal-nav.active .cabecalhoPrincipal-nav-ul{visibility: visible; height: calc(100vh - 90px); overflow-y: hidden;}
+    .cabecalhoPrincipal-nav-ul-itens {text-align: center; padding: 1em 0; margin: 0 1em; border-bottom: 2px solid var(--bgCabecalhoPrincipalNavUlItens); overflow: hidden;}
+    .cabecalhoPrincipal-nav-ul-itens:not(:last-child) {top: calc(3 * 1em);}
+    .cabecalhoPrincipal-nav-ul-itens:last-child {position: absolute; top: 0; width: calc(100% - 2 * 1em);}
 }
 
 @media screen and (min-width: 1045px) {
