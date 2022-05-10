@@ -149,20 +149,20 @@ body {
     color: var(--colorItensmenu_ArtigoParagrafos);
 }
 
-.cabecalhoPrincipal-nav-ul-itens:hover, 
-.cabecalhoPrincipal-nav-ul-itens a:hover {
+.cabecalhoPrincipal-nav-ul-itens a:hover,
+.cabecalhoPrincipal-nav-ul-itens span:hover {
     color: chocolate;
 }
 
-.cabecalhoPrincipal-nav-ul-itens:hover .membros {
+.cabecalhoPrincipal-nav-ul-itens span:hover .membros {
     display: block;
     position: absolute;
     right: 0;
 
-    max-width: 270px;
+    width: 270px;
 
     padding: 1em 1em 0;
-    margin: 8px -10px 0 0;
+    margin: -50px -10px 0 0;
 
     background-color: var(--bgMembros);
 
@@ -170,7 +170,7 @@ body {
 
     cursor: default;
 
-    animation: fadeIn 300ms linear;
+    animation: fadeIn 500ms linear;
 }
 
 .nome {
@@ -343,7 +343,7 @@ body {
 .conteudoPrincipal-artigo ol {
     list-style: decimal;
 
-    margin-left: 100px;
+    margin-left: 15%;
 }
 
 .conteudoPrincipal-artigo ol li p {
@@ -528,14 +528,18 @@ body {
 }
 
 @media screen and (max-width: 999px) {
-    .cabecalhoPrincipal-nav-ul-itens:hover .membros {position: fixed; left: 0; right: 0; bottom: 175px; margin: 0 auto;}
     .cabecalhoPrincipal-bg {background-color: var(--bgDefault)}
     #mobile-menu {display: block; font-size: 1.8em; padding: 3px 7px; color: var(--colorItensmenu_ArtigoParagrafos); background: none; border: none;cursor: pointer;}
-    .cabecalhoPrincipal-nav-ul {display: block; visibility: hidden; position: absolute; top: 90px; right: 0; width: 100%; height: 0;background-color: var(--bgDefault); overflow-y: hidden; z-index: 1000; transition: .6s all;}    
-    .cabecalhoPrincipal-nav.active .cabecalhoPrincipal-nav-ul{visibility: visible; height: calc(100vh - 90px); overflow-y: hidden;}
-    .cabecalhoPrincipal-nav-ul-itens {text-align: center; padding: 1em 0; margin: 0 1em; border-bottom: 2px solid var(--bgCabecalhoPrincipalNavUlItens); overflow: hidden;}
+    .cabecalhoPrincipal-nav-ul {display: block; visibility: hidden; position: absolute; top: 85px; right: 0; width: 100%; height: 0; background-color: var(--bgDefault); overflow-y: hidden; z-index: 1000; transition: .6s all;}
+    .cabecalhoPrincipal-nav-ul-itens::after {visibility: hidden;}
+    .cabecalhoPrincipal-nav.active .cabecalhoPrincipal-nav-ul{visibility: visible; height: calc(100vh - 85px); overflow-y: hidden;}
+    .cabecalhoPrincipal-nav.active .cabecalhoPrincipal-nav-ul-itens::after {visibility: visible;}
+    .cabecalhoPrincipal-nav-ul-itens {text-align: center; padding: 1em 0; margin: 0 1em; overflow: hidden; cursor: default;}
+    .cabecalhoPrincipal-nav-ul-itens::after {content: ''; position: fixed; left: 1em; right: 1em; margin-top: 1em; background: var(--bgCabecalhoPrincipalNavUlItens); height: 2px; display: block;}
+    .cabecalhoPrincipal-nav-ul-itens span {display: inline-block; cursor: pointer;}
+    .cabecalhoPrincipal-nav-ul-itens span:hover .membros {display: block; position: fixed; left: 0; right: 0; margin: -100px auto;}
     .cabecalhoPrincipal-nav-ul-itens:not(:last-child) {top: calc(3 * 1em);}
-    .cabecalhoPrincipal-nav-ul-itens:last-child {position: absolute; top: 0; width: calc(100% - 2 * 1em);}
+    .cabecalhoPrincipal-nav-ul-itens:last-child {position: absolute; top: 0; width: calc(100% - (2 * 1em));}
 }
 
 @media screen and (min-width: 1045px) {
